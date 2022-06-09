@@ -12,38 +12,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "amount",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "getBalance",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "greet",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -60,13 +34,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "pay",
-				"outputs": [],
-				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -88,19 +55,6 @@
 				"outputs": [
 					{
 						"internalType": "address payable",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "sender",
-				"outputs": [
-					{
-						"internalType": "address",
 						"name": "",
 						"type": "address"
 					}
@@ -141,11 +95,11 @@
 	},
 	"sources": {
 		"contracts/lottery.sol": {
-			"keccak256": "0xc5b67b7dd6b78eeace88956a824725f0750571919d04b6fad47c8ca364b44316",
+			"keccak256": "0x5658c02ad6b5df417b44e0c035b7294579e37f1271fce573d8b7aaa85328f580",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://82b85f1e682bab6a6f82e7531c71807f8957f1253affa523e7673cc752eae297",
-				"dweb:/ipfs/Qmb9s6hkjZaGjrQ7vtm8kLEJrTiNmPvRf1HTwTGXmJxpwa"
+				"bzz-raw://4fef4cc77ea86f557ce3e4da29b5c6e18bd546a0abf1f04213c1fd0a950b9497",
+				"dweb:/ipfs/QmeZX3owsqbDFuNNfg1YYgM6jrtsmyUTjYYqiXceRwG495"
 			]
 		}
 	},

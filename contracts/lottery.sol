@@ -8,16 +8,6 @@ contract Lottery
     address payable [] public players; //dynamic array of type address payable
     address public manager;
 
-    string public greet = "Hello World";
-    address public sender;
-    uint public amount;
-
-    function pay () external payable
-    {
-        sender = msg.sender;
-        amount = msg.value;
-    }
-
     // declaring the constructor
     constructor ()
     {
@@ -26,10 +16,10 @@ contract Lottery
     }
 
     // declaring the receive() function that is necessary to receive ETH
-    receive () payable external
+    receive () external payable
     {
-        // each player sends exactly 0.1 ETH
-        require(msg.value == 0.1 ether);
+        // each player sends exactly 0.00001 ETH
+        require(msg.value == 0.00001 ether);
         // appending the player to the players array
         players.push(payable(msg.sender));
     }
