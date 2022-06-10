@@ -5,7 +5,8 @@ pragma solidity >=0.5.0 <0.9.0;
 contract Lottery
 {
     // declaring the state variables
-    address payable [] public players; //dynamic array of type address payable
+    //dynamic array of type address payable
+    address payable [] public players;
     address public manager;
 
     // declaring the constructor
@@ -19,7 +20,7 @@ contract Lottery
     receive () external payable
     {
         // each player sends exactly 0.00001 ETH
-        require(msg.value == 0.00001 ether);
+        require(msg.value == 1 ether, "Il faut 1 eth");
         // appending the player to the players array
         players.push(payable(msg.sender));
     }
@@ -30,12 +31,6 @@ contract Lottery
         // only the manager is allowed to call it
         require(msg.sender == manager);
         return address(this).balance;
-    }
-
-    // helper function that returns a big random integer
-    function random () internal view returns (uint)
-    {
-       return uint(keccak256(abi.encodePacked(block.difficulty, block.timestamp, players.length)));
     }
 
     // selecting the winner
@@ -58,5 +53,11 @@ contract Lottery
         
         // resetting the lottery for the next round
         players = new address payable [](0);
+    }
+
+    // helper function that returns a big random integer
+    function random () internal view returns (uint)
+    {
+       return uint(keccak256(abi.encodePacked(block.difficulty, block.timestamp, players.length)));
     }
 }
